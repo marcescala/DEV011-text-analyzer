@@ -11,7 +11,7 @@ const cuatro = "Promedio longitud: "
 const cinco= "Números: "
 const seis= "Suma de números: "
 
-button.addEventListener("click", () => {
+/*button.addEventListener("click", () => {
   cuadrodetexto.value = "";
   lipalabras.textContent = uno+"0";
   licaracteres.textContent = dos + "0";
@@ -19,7 +19,19 @@ button.addEventListener("click", () => {
   lipromedio.textContent = cuatro + "0";
   linumero.textContent = cinco + "0";
   lisuma.textContent = seis + "0";
-});
+});*/
+
+function Limpiar() {
+  cuadrodetexto.value = "";
+  lipalabras.textContent = uno+"0";
+  licaracteres.textContent = dos + "0";
+  licaracteresespacio.textContent = tres + "0";
+  lipromedio.textContent = cuatro + "0";
+  linumero.textContent = cinco + "0";
+  lisuma.textContent = seis + "0";
+}
+
+button.addEventListener("click", Limpiar);
 
 const lipalabras = document.querySelector("li[data-testid='word-count']" )
 const licaracteres = document.querySelector("li[data-testid='character-count'] " )

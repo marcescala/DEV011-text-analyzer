@@ -12,3 +12,5 @@ La página tiene las siguientes funciones:
 Cuando la usuaria ingresa el texto, aparecen las métricas especificadas. Si desea ingresar otro texto, tiene un botón que borra toda la información.
 
 El diseño de la página está pensado para que sea muy sencillo y sobrio, sin crear ninguna distracción, y su utilización sea muy orgánica, permitiendo que la usuaria pueda leer la información. La paleta de colores transmite tranquilidad y hace que el tema de los conteos sea menos monótono.
+
+La página fue creada en HTML, CSS y JavaScript.
