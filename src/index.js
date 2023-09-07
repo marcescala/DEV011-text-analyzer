@@ -1,9 +1,7 @@
 import analyzer from './analyzer.js';
 
-
-
 const button = document.getElementById("resetButton");
-const cuadrodetexto = document.querySelector("textarea[name=user-input]")
+const textarea = document.querySelector("textarea[name=user-input]")
 const uno = "Palabras: "
 const dos = "Caracteres: "
 const tres = "Caracteres sin espacio: "
@@ -11,18 +9,8 @@ const cuatro = "Promedio longitud: "
 const cinco= "Números: "
 const seis= "Suma de números: "
 
-/*button.addEventListener("click", () => {
-  cuadrodetexto.value = "";
-  lipalabras.textContent = uno+"0";
-  licaracteres.textContent = dos + "0";
-  licaracteresespacio.textContent = tres + "0";
-  lipromedio.textContent = cuatro + "0";
-  linumero.textContent = cinco + "0";
-  lisuma.textContent = seis + "0";
-});*/
-
 function Limpiar() {
-  cuadrodetexto.value = "";
+  textarea.value = "";
   lipalabras.textContent = uno+"0";
   licaracteres.textContent = dos + "0";
   licaracteresespacio.textContent = tres + "0";
@@ -40,33 +28,32 @@ const lipromedio = document.querySelector ("li[data-testid='word-length-average'
 const linumero = document.querySelector ("li[data-testid='number-count'] " )	
 const lisuma = document.querySelector ("li[data-testid='number-sum'] " )	
 
-
 function count(){
   //función getWordCount
-  const resultado1 = analyzer.getWordCount(cuadrodetexto.value) 
+  const resultado1 = analyzer.getWordCount(textarea.value) 
   lipalabras.textContent =  uno + resultado1;
 
   //función getCharacterCount      
-  const resultado2 = analyzer.getCharacterCount(cuadrodetexto.value) 
+  const resultado2 = analyzer.getCharacterCount(textarea.value) 
   licaracteres.textContent = dos + resultado2;
 
   //función  getCharacterCountExcludingSpaces:
-  const resultado3 = analyzer.getCharacterCountExcludingSpaces(cuadrodetexto.value)
+  const resultado3 = analyzer.getCharacterCountExcludingSpaces(textarea.value)
   licaracteresespacio.textContent = tres + resultado3;
 
   //función  getAverageWordLength:
-  const resultado4 = analyzer.getAverageWordLength(cuadrodetexto.value)
+  const resultado4 = analyzer.getAverageWordLength(textarea.value)
   lipromedio.textContent = cuatro + resultado4;
 
   //función getNumberCount:
-  const resultado5 = analyzer.getNumberCount(cuadrodetexto.value)
+  const resultado5 = analyzer.getNumberCount(textarea.value)
   linumero.textContent = cinco + resultado5;
 
   //función getNumberSum:
-  const resultado6 = analyzer.getNumberSum(cuadrodetexto.value)
+  const resultado6 = analyzer.getNumberSum(textarea.value)
   lisuma.textContent = seis + resultado6;
 
 }
 
 		
-cuadrodetexto.addEventListener("keyup", count);
+textarea.addEventListener("keyup", count);

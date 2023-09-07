@@ -21,7 +21,7 @@ const analyzer = {
     for (let i = 0; i < palabra.length; i++)
       totalLength += palabra[i].length;
     const respuesta = totalLength / palabra.length
-    return respuesta.toFixed(2)
+    return parseFloat(respuesta.toFixed(2))
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
   },
   getNumberCount: (text) => {
@@ -32,9 +32,7 @@ const analyzer = {
         cantidadNumeros ++
       } 
     }
-     
     return cantidadNumeros
-
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
   },
   getNumberSum: (text) => {
@@ -45,7 +43,6 @@ const analyzer = {
       if (!isNaN(arrSinEspacios[i])) {
         numerosuma = numerosuma + numero
       } 
- 
     }
     return numerosuma
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
